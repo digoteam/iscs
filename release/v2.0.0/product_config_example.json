@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/microsoft/vscode-css-languageservice/master/docs/customData.schema.json",
+    "$schema": "https://raw.githubusercontent.com/digoteam/iscs/master/release/v2.0.0/product_config_schema.json",
     "name": "{your-configuration-name}",
     
     "code": "{your-product-name}",

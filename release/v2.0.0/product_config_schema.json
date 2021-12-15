@@ -1,5 +1,65 @@
 {
-    "title": "Product",
-    "description": "A product in the catalog",
-    "type": "object"
+  "$schema": "http://json-schema.org/schema",
+  "title": "Cấu hình sản phẩm.",
+  "description": "Cấu hình sản phẩm khi tích hợp với ISCS.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Tên cấu của sản phẩm."
+    },
+    "code": {
+      "type": "string",
+      "description": "Mã cấu của sản phẩm, đặt theo quy tắc kebab-case."
+    },
+    "groups": {
+      "type": "array",
+      "description": "Nhóm cấu hình sản phẩm, chứa danh sách các domain truy cập.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "parameters": {
+      "type": "array",
+      "description": "Danh sách các tham số cấu hình",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Tên thuộc tính cấu hình, cho phép phân cách nhau bởi dấu chấm (tự động hiểu như là kiểu object trong web)"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["String", "Integer", "Object", "Boolean", "Array", "Double"],
+            "description": "Kiểu dữ liệu của thuộc tính cấu hình"
+          },
+          "originValue": {
+            "type": "string",
+            "description": "Giá trị của người dùng nhập vào ban đầu"
+          },
+          "integerValue": {
+            "type": "number",
+            "description": "Giá trị nếu originValue là integer"
+          },
+          "doubleValue": {
+            "type": "number",
+            "description": "Giá trị nếu originValue là double, dùng chung cho số thực"
+          },
+          "booleanValue": {
+            "type": "string",
+            "description": "Giá trị nếu originValue là boolean"
+          },
+          "objectValue": {
+            "type": "object",
+            "description": "Giá trị nếu originValue là object"
+          },
+          "arrayValue": {
+            "type": "array",
+            "description": "Giá trị nếu originValue là array"
+          }
+        }
+      }
+    }
   }
+}
