@@ -1,7 +1,8 @@
 {
     "$schema": "https://raw.githubusercontent.com/digoteam/iscs/master/release/v2.0.0/product_config_schema.json",
-    "name": "{your-configuration-name}",
     
+    
+    "name": "{your-configuration-name}",
     "code": "{your-product-name}",
     
     "groups": [

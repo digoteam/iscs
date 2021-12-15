@@ -1,5 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema",
+  "$id": "iscs-production-configuration-schema",
+  "version": "2.0.0",
   "title": "Cấu hình sản phẩm.",
   "description": "Cấu hình sản phẩm khi tích hợp với ISCS.",
   "type": "object",
