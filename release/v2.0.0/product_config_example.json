@@ -111,10 +111,10 @@
             "type": "Object",
             "originValue": "",
             "objectValue": {
-                "icode": {
+                "{icode}": {
                     "rootUrl": "{https://iscsapidev.digigov.vn}",
                     "services": {
-                        "auth": {"path": "auth", "rootUrl": null}
+                        "{auth}": {"path": "{auth}", "rootUrl": null}
                     }
                 }
             }
