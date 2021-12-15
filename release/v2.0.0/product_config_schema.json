@@ -19,7 +19,8 @@
       "description": "Nhóm cấu hình sản phẩm, chứa danh sách các domain truy cập.",
       "items": {
         "type": "string"
-      }
+      },
+      "minItems": 1
     },
     "parameters": {
       "type": "array",
@@ -38,7 +39,7 @@
           },
           "originValue": {
             "type": "string",
-            "description": "Giá trị của người dùng nhập vào ban đầu"
+            "description": "Giá trị của người dùng nhập vào ban đầu."
           },
           "integerValue": {
             "type": "number",
@@ -49,7 +50,7 @@
             "description": "Giá trị nếu originValue là double, dùng chung cho số thực"
           },
           "booleanValue": {
-            "type": "string",
+            "type": "boolean",
             "description": "Giá trị nếu originValue là boolean"
           },
           "objectValue": {
@@ -60,8 +61,10 @@
             "type": "array",
             "description": "Giá trị nếu originValue là array"
           }
-        }
+        },
+        "minItems": 1
       }
     }
-  }
+  },
+  "additionalProperties": false
 }

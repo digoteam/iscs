@@ -1,0 +1,10 @@
+[
+    {
+        // paste data here...
+
+        "applyDefault": true,
+        "isPublic": true,
+        "status": 1,
+        "deploymentId": "{deploymentId}"
+    }
+]

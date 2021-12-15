@@ -1,10 +1,7 @@
 {
     "$schema": "https://raw.githubusercontent.com/digoteam/iscs/master/release/v2.0.0/product_config_schema.json",
-    
-    
     "name": "{your-configuration-name}",
-    "code": "{your-product-name}",
-    
+    "code": "{your-product-name}", 
     "groups": [
         "{yourdomain.com}"
     ],
@@ -12,27 +9,27 @@
         {
             "key": "oidcOptions.authConfig.issuer",
             "type": "String",
-            "originValue": "https://iscsoidcdev.digigov.vn/auth/realms/iscs"
+            "originValue": "{https://iscsoidcdev.digigov.vn/auth/realms/iscs}"
+        },
+        {
+            "key": "oidcOptions.authConfig.clientId",
+            "type": "String",
+            "originValue": "{iscs-web-ma}"
+        },
+        {
+            "key": "oidcOptions.authConfig.serverUrl",
+            "type": "String",
+            "originValue": "{https://iscsoidcdev.digigov.vn/auth/realms/iscs/protocol/openid-connect}"
+        },
+        {
+            "key": "oidcOptions.authConfig.tokenEndpoint",
+            "type": "String",
+            "originValue": "{https://iscsoidcdev.digigov.vn/auth/realms/iscs/protocol/openid-connect/token}"
         },
         {
             "key": "oidcOptions.authConfig.scope",
             "type": "String",
             "originValue": "openid"
-        },
-        {
-            "key": "oidcOptions.authConfig.clientId",
-            "type": "String",
-            "originValue": "iscs-web-ma"
-        },
-        {
-            "key": "oidcOptions.authConfig.serverUrl",
-            "type": "String",
-            "originValue": "https://iscsoidcdev.digigov.vn/auth/realms/iscs/protocol/openid-connect"
-        },
-        {
-            "key": "oidcOptions.authConfig.tokenEndpoint",
-            "type": "String",
-            "originValue": "https://iscsoidcdev.digigov.vn/auth/realms/iscs/protocol/openid-connect/token"
         },
         {
             "key": "oidcOptions.authConfig.userinfoEndpoint",
@@ -82,72 +79,45 @@
             "type": "String",
             "originValue": "/revoke"
         },
+        
         {
             "key": "passwordCredentials.tokenEndpoint",
             "type": "String",
-            "originValue": "https://iscsoidcdev.digigov.vn/auth/realms/iscs/protocol/openid-connect/token"
+            "originValue": "{https://iscsoidcdev.digigov.vn/auth/realms/iscs/protocol/openid-connect/token}"
         },
         {
             "key": "passwordCredentials.clientId",
             "type": "String",
-            "originValue": "iscs-web-ma-password"
+            "originValue": "{iscs-web-ma-password}"
         },
         {
             "key": "passwordCredentials.username",
             "type": "String",
-            "originValue": "iscs-web-ma-password"
+            "originValue": "{iscs-web-ma-password}"
         },
         {
             "key": "passwordCredentials.password",
             "type": "String",
-            "originValue": "Vnpt@123"
+            "originValue": "{client-secret}"
         },
         {
             "key": "passwordCredentials.scope",
             "type": "String",
             "originValue": "openid"
         },
+
         {
-            "key": "apiProviders.icode.rootUrl",
-            "type": "String",
-            "originValue": "https://iscsapidev.digigov.vn"
-        },
-        {
-            "key": "apiProviders.icode.services.auth",
+            "key": "apiProviders",
             "type": "Object",
-            "originValue": "{path=auth}",
+            "originValue": "",
             "objectValue": {
-                "path": "auth"
+                "icode": {
+                    "rootUrl": "{https://iscsapidev.digigov.vn}",
+                    "services": {
+                        "auth": {"path": "auth", "rootUrl": null}
+                    }
+                }
             }
-        },
-        {
-            "key": "apiProviders.icode.services.directory",
-            "type": "Object",
-            "originValue": "{path=directory}",
-            "objectValue": {
-                "path": "directory"
-            }
-        },
-        {
-            "key": "apiProviders.icode.services.location",
-            "type": "Object",
-            "originValue": "{path=location}",
-            "objectValue": {
-                "path": "location"
-            }
-        },
-        {
-            "key": "apiProviders.icode.services.storage",
-            "type": "Object",
-            "originValue": "{path=storage}",
-            "objectValue": {
-                "path": "storage"
-            }
-        },
-        {
-            "key": "webStaticURL",
-            "type": "String",
-            "originValue": "https://iscsstaticdev.digigov.vn/"
         }
     ]
 }
