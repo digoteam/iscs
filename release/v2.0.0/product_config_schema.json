@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "$id": "iscs-production-configuration-schema",
+  "$id": "iscs-product-configuration-schema",
   "version": "2.0.0",
   "title": "Cấu hình sản phẩm.",
   "description": "Cấu hình sản phẩm khi tích hợp với ISCS.",
@@ -39,32 +39,34 @@
           },
           "originValue": {
             "type": "string",
-            "description": "Giá trị của người dùng nhập vào ban đầu."
+            "description": "Giá trị được lưu dưới dạng string"
           },
           "integerValue": {
             "type": "number",
-            "description": "Giá trị nếu originValue là integer"
+            "description": "Giá trị nếu originValue mong muốn là integer"
           },
           "doubleValue": {
             "type": "number",
-            "description": "Giá trị nếu originValue là double, dùng chung cho số thực"
+            "description": "Giá trị nếu originValue mong muốn là double, dùng chung cho số thực"
           },
           "booleanValue": {
             "type": "boolean",
-            "description": "Giá trị nếu originValue là boolean"
+            "description": "Giá trị nếu originValue mong muốn là boolean"
           },
           "objectValue": {
             "type": "object",
-            "description": "Giá trị nếu originValue là object"
+            "description": "Giá trị nếu originValue mong muốn là object"
           },
           "arrayValue": {
             "type": "array",
-            "description": "Giá trị nếu originValue là array"
+            "description": "Giá trị nếu originValue mong muốn là array"
           }
         },
-        "minItems": 1
+        "minItems": 1,
+        "required": ["key", "type", "originValue"]
       }
     }
   },
-  "additionalProperties": false
+  "additionalProperties": false,
+  "required": ["name", "code", "groups", "parameters"]
 }
