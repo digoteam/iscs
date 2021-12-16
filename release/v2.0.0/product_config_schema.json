@@ -1,8 +1,8 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "iscs-product-configuration-schema",
   "title": "Cấu hình sản phẩm.",
-  "description": "Cấu hình sản phẩm khi tích hợp với ISCS.",
+  "description": "Cấu hình sản phẩm khi tích hợp với ISCS (build version 1)",
   "type": "object",
   "properties": {
     "name": {
@@ -62,7 +62,8 @@
           }
         },
         "minItems": 1,
-        "required": ["key", "type", "originValue"]
+        "required": ["key", "type", "originValue"],
+        "additionalProperties": false
       }
     }
   },
