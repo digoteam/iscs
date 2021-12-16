@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "iscs-product-configuration-schema",
   "title": "Cấu hình sản phẩm.",
   "description": "Cấu hình sản phẩm khi tích hợp với ISCS.",
